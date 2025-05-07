@@ -66,7 +66,7 @@ let backlightMaterials = [];
 
 // Load Keyboard Model
 new GLTFLoader().load(
-  'public/models/compressed.glb',
+  'models/compressed.glb',
   ({ scene: gltfScene }) => {
     gltfScene.traverse(n => {
       if (n.isMesh) {
@@ -95,7 +95,7 @@ new GLTFLoader().load(
 
 // Load Backlight Model
 new OBJLoader().load(
-  'public/models/backlights.obj',
+  'models/backlights.obj',
   obj => {
     const box = new THREE.Box3().setFromObject(obj);
     const width = box.max.x - box.min.x;
@@ -150,7 +150,7 @@ let mouseGroup = new THREE.Group();
 scene.add(mouseGroup);
 
 new GLTFLoader().load(
-  'public/models/mouse.glb',
+  'models/mouse.glb',
   ({ scene: mouseScene }) => {
     mouseScene.traverse(n => {
       if (n.isMesh) {
