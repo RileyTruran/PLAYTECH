@@ -66,7 +66,7 @@ let backlightMaterials = [];
 
 // Load Keyboard Model
 new GLTFLoader().load(
-  '/models/compressed.glb',
+  'public/models/compressed.glb',
   ({ scene: gltfScene }) => {
     gltfScene.traverse(n => {
       if (n.isMesh) {
