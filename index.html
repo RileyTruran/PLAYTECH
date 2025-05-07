@@ -197,5 +197,21 @@
         });
       }
     </script>
+    <script>
+    function showCartNotification() {
+      const cartNote = document.getElementById("cart-added-note");
+      const cartButton = document.getElementById("cart-btn");
+  
+      if (cartNote && cartButton) {
+        cartNote.style.display = "block";
+        cartButton.classList.add("cart-animate");
+  
+        setTimeout(() => {
+          cartNote.style.display = "none";
+          cartButton.classList.remove("cart-animate");
+        }, 1300);
+      }
+    }
+  </script>
   </body>
 </html>
