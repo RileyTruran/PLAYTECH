@@ -254,22 +254,13 @@ function handleAddToCart(event) {
   cart.push({ name, description, price, image: imageUrl });
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartCount();
-
-  // Animate cart icon
-  const cartButton = document.getElementById("cart-btn");
-  if (cartButton) {
-    cartButton.classList.add("cart-animate");
-    setTimeout(() => {
-      cartButton.classList.remove("cart-animate");
-    }, 1300);
-  }
-
-  // Show cart notification
-  const cartNote = document.getElementById("cart-added-note");
-  if (cartNote) {
-    cartNote.style.display = "block";
-    setTimeout(() => {
-      cartNote.style.display = "none";
-    }, 1300);
-  }
+  triggerCartAnimation();
+  showCartNotification();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".add-to-cart").forEach(button =>
+    button.addEventListener("click", handleAddToCart)
+  );
+  updateCartCount();
+});
