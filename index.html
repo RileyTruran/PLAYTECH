@@ -209,7 +209,6 @@
       const cart = getCart();
       cart.push({ name, description, price, image: imageUrl });
       localStorage.setItem("cart", JSON.stringify(cart));
-      updateCartCount();
 
       cartNote.style.display = "block";
       cartButton.classList.add("cart-animate");
