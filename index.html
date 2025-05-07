@@ -197,21 +197,48 @@
         });
       }
     </script>
-    <script>
-    function showCartNotification() {
-      const cartNote = document.getElementById("cart-added-note");
-      const cartButton = document.getElementById("cart-btn");
-  
-      if (cartNote && cartButton) {
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cartNote = document.getElementById("cart-added-note");
+    const cartButton = document.getElementById("cart-btn");
+
+    function getCart() {
+      return JSON.parse(localStorage.getItem("cart")) || [];
+    }
+
+    function updateCartCount() {
+      document.getElementById("cart-count").textContent = getCart().length;
+    }
+
+    function handleAddToCart(event) {
+      const card = event.target.closest(".product-card");
+      const name = card.querySelector("h3").textContent;
+      const description = card.querySelectorAll("p")[0].textContent;
+      const price = card.querySelector(".price").textContent;
+      const imageStyle = card.querySelector(".product-image").style.backgroundImage;
+      const imageUrl = imageStyle.slice(5, -2);
+
+      const cart = getCart();
+      cart.push({ name, description, price, image: imageUrl });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+
+      if (cartNote) {
         cartNote.style.display = "block";
         cartButton.classList.add("cart-animate");
-  
         setTimeout(() => {
           cartNote.style.display = "none";
           cartButton.classList.remove("cart-animate");
         }, 1300);
       }
     }
-  </script>
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+      button.addEventListener("click", handleAddToCart);
+    });
+
+    updateCartCount();
+  });
+</script>
   </body>
 </html>
