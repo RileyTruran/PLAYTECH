@@ -1,6 +1,6 @@
 import * as THREE from '.lib/three/three.module.js';
-import { GLTFLoader } from 'lib/three/GLTFLoader.js';
-import { OBJLoader } from 'lib/three/OBJLoader.js';
+import { GLTFLoader } from '.lib/three/GLTFLoader.js';
+import { OBJLoader } from '.lib/three/OBJLoader.js';
 
 // Scene
 const scene = new THREE.Scene();
