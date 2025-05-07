@@ -257,10 +257,3 @@ function handleAddToCart(event) {
   triggerCartAnimation();
   showCartNotification();
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".add-to-cart").forEach(button =>
-    button.addEventListener("click", handleAddToCart)
-  );
-  updateCartCount();
-});
