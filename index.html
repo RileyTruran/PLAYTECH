@@ -1,15 +1,4 @@
-    function handleAddToCart(event) {
-      const card = event.target.closest(".product-card");
-      const name = card.querySelector("h3").textContent;
-      const description = card.querySelectorAll("p")[0].textContent;
-      const price = card.querySelector(".price").textContent;
-      const imageStyle = card.querySelector(".product-image").style.backgroundImage;
-      const imageUrl = imageStyle.slice(5, -2);
-
-      const cart = getCart();
-      cart.push({ name, description, price, image: imageUrl });
-      localStorage.setItem("cart", JSON.stringify(cart));
-      updateCartCount();<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <base href="/PLAYTECH/">
