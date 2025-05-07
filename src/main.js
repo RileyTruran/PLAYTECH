@@ -59,7 +59,7 @@ let spotlightIntensity = { min: 0.7, max: 0.9, current: 0.8, increasing: true };
 
 // Container for Keyboard and Backlights
 const container = new THREE.Group();
-container.scale.set(0.1, 0.1, 0.1);
+container.scale.set(0.085, 0.085, 0.085);
 scene.add(container);
 
 let backlightMaterials = [];
@@ -84,8 +84,7 @@ new GLTFLoader().load(
     const box = new THREE.Box3().setFromObject(container);
     const center = box.getCenter(new THREE.Vector3());
     container.position.sub(center);
-    container.scale.set(0.085, 0.085, 0.085);
-    container.position.y += 20;
+    container.position.y += 17.5;
     container.position.x -= 25;
     container.rotation.x = THREE.MathUtils.degToRad(-5);
     container.rotation.z = THREE.MathUtils.degToRad(90);
