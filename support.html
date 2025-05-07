@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLAYTECH - Support</title>
+  <link rel="stylesheet" href="src/styles.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .container section {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--gray-color);
+    }
+
+    .container section:last-of-type {
+      border-bottom: none;
+    }
+
+    .container section h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .container section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: white;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header id="top-banner">
+    <a href="index.html" class="logo">PLAYTECH</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products..." />
+    </div>
+    <div class="cart-container">
+      <button class="cart-button" onclick="window.location.href='cart.html'">
+        🛒 <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 100px; padding: 2rem;">
+    <h1>Support</h1>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, concerns, or need technical support, our team is here to help. You can reach us via email at <a href="mailto:support@playtech.com">support@playtech.com</a>.</p>
+      <p>We aim to respond to all inquiries within 1 business day. Please include your order number (if applicable) and a detailed description of your issue to help us assist you as efficiently as possible.</p>
+      <p>For urgent matters, our support team is also available via live chat between 9:00 AM – 5:00 PM (AWST), Monday to Friday.</p>
+    </section>
+
+    <section id="faqs" style="margin-top: 4rem;">
+      <h2>FAQs</h2>
+
+      <p><strong>Q: How long does shipping take?</strong></p>
+      <p>A: Standard shipping within Australia typically takes 2–5 business days.</p>
+
+      <p><strong>Q: Do you ship internationally?</strong></p>
+      <p>A: Yes, we offer international shipping to most countries. Delivery times and shipping rates vary depending on location and shipping method.</p>
+
+      <p><strong>Q: Can I cancel or change my order after it’s placed?</strong></p>
+      <p>A: If your order hasn’t yet been processed, you may contact us to request a cancellation or modification. Once the order has shipped, changes cannot be made.</p>
+
+      <p><strong>Q: How do I track my order?</strong></p>
+      <p>A: Once your order is shipped, a tracking number will be sent to your email. You can use this number on our carrier’s website to monitor your delivery.</p>
+    </section>
+
+    <section id="warranty" style="margin-top: 4rem;">
+      <h2>Warranty & Returns</h2>
+      <p>All PLAYTECH products come with a 12-month manufacturer’s warranty that covers defects in materials or production under normal use.</p>
+
+      <p>If you experience issues with your product within this period, please contact us with your proof of purchase and a description of the problem. Our team will assess whether a repair, replacement, or refund is appropriate.</p>
+
+      <p>Returns for change of mind are accepted within 30 days of delivery, provided the item is in original condition with all packaging and accessories. Return shipping costs for change-of-mind returns are the responsibility of the customer.</p>
+
+      <p>To initiate a return or warranty claim, please email <a href="mailto:support@playtech.com">support@playtech.com</a> with your order number and a clear explanation of the issue.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="keyboards.html">Keyboards</a></li>
+          <li><a href="mice.html">Mice</a></li>
+          <li><a href="monitors.html">Monitors</a></li>
+          <li><a href="components.html">Components</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="support.html#contact">Contact Us</a></li>
+          <li><a href="support.html#faqs">FAQs</a></li>
+          <li><a href="support.html#warranty">Warranty & Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#top-banner">Home</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com" class="social-icon" target="_blank">
+            <img src="public/images/facebook.png" alt="Facebook" style="width: 28px; height: 28px;" />
+          </a>
+          <a href="https://twitter.com" class="social-icon" target="_blank">
+            <img src="public/images/x.png" alt="Twitter/X" style="width: 28px; height: 28px;" />
+          </a>
+          <a href="https://www.instagram.com" class="social-icon" target="_blank">
+            <img src="public/images/instagram.png" alt="Instagram" style="width: 28px; height: 28px;" />
+          </a>
+          <a href="https://www.youtube.com" class="social-icon" target="_blank">
+            <img src="public/images/youtube.png" alt="YouTube" style="width: 28px; height: 28px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PLAYTECH. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  const searchInput = document.querySelector('.search-bar input');
+  if (searchInput) {
+    searchInput.addEventListener('keypress', function (e) {
+        const trimmed = searchInput.value.trim();
+        if (e.key === 'Enter' && trimmed) {
+            window.location.href = `search.html?query=${encodeURIComponent(trimmed)}`;
+        }
+    });
+    }
+  </script>
+
+  <script>
+    document.getElementById("cart-count").textContent = JSON.parse(localStorage.getItem("cart") || "[]").length;
+  </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLAYTECH - Home</title>
+  <link rel="stylesheet" href="src/styles.css" />
+  <style>
+    .add-notification {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #28a745;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      z-index: 1000;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .cart-animate {
+      animation: bump-shake 0.6s ease;
+    }
+
+    @keyframes bump-shake {
+      0% {
+        transform: scale(1);
+      }
+      30% {
+        transform: scale(1.5) rotate(-10deg);
+      }
+      50% {
+        transform: scale(1.5) rotate(10deg);
+      }
+      70% {
+        transform: scale(1.5) rotate(-10deg);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="top-banner">
+    <a href="index.html" class="logo">PLAYTECH</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products." />
+    </div>
+    <div class="cart-container">
+      <button class="cart-button" id="cart-btn" onclick="window.location.href='cart.html'">
+        🛒 <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="cart-added-note" class="add-notification">Item added to cart!</div>
+
+  <section id="hero">
+    <div id="three-container"></div>
+    <div class="hero-content">
+      <h1>Next Generation Gaming Solutions</h1>
+      <p>Experience unparalleled precision and performance</p>
+      <a href="#featured-products" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-image" style="background-image: url('public/images/rgb_pro.png'); background-size: 60%; background-position: center; background-repeat: no-repeat;"></div>
+        <h3>CORSAIR K70 RGB PRO</h3>
+        <p>CHERRY MX RGB Brown Switches: Tactile and Non-Clicky, 8,000Hz Hyper-Polling, PBT DOUBLE-SHOT</p>
+        <p class="price">$149.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image" style="background-image: url('public/images/silent_touch.png'); background-size: 80%; background-position: center; background-repeat: no-repeat;"></div>
+        <h3>Ducky One 2 Mini</h3>
+        <p>Pure White - RGB LED 60% Double Shot PBT Mechanical Keyboard</p>
+        <p class="price">$129.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image" style="background-image: url('public/images/wireless_elite.png'); background-size: 70%; background-position: center; background-repeat: no-repeat;"></div>
+        <h3>Razer Huntsman Mini 60%</h3>
+        <p>Fast Keyboard Switches - Linear Optical Switches - Chroma RGB Lighting - PBT Keycaps - Onboard Memory - Snap Tap - Black</p>
+        <p class="price">$159.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+        <a href="keyboards.html" class="category-card">
+            <div class="category-image" style="background-image: url('public/images/keyboard.png'); background-size: cover;"></div>
+            <h3>Keyboards</h3>
+        </a>
+        <a href="mice.html" class="category-card">
+             <div class="category-image" style="background-image: url('public/images/mouse.png'); background-size: cover;"></div>
+             <h3>Mice</h3>
+        </a>
+        <a href="monitors.html" class="category-card">
+            <div class="category-image" style="background-image: url('public/images/monitor.png'); background-size: 70%; background-position: center; background-repeat: no-repeat;"></div>
+            <h3>Monitors</h3>
+        </a>
+        <a href="components.html" class="category-card">
+            <div class="category-image" style="background-image: url('public/images/components.png'); background-size: 70%; background-position: center; background-repeat: no-repeat;"></div>
+            <h3>Components</h3>
+        </a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-content">
+      <h2>About PLAYTECH</h2>
+      <p>PLAYTECH is dedicated to providing gamers and professionals with premium computer hardware. Our products combine cutting-edge technology with sleek design for an unparalleled computing experience.</p>
+      <p>Founded in 2025, we've quickly established ourselves as a trusted name in gaming peripherals and computer hardware.</p>
+    </div>
+  </section>
+
+  <section id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for the latest product releases and exclusive offers.</p>
+    <form id="newsletter-form">
+      <input type="email" placeholder="Your email address" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="keyboards.html">Keyboards</a></li>
+          <li><a href="mice.html">Mice</a></li>
+          <li><a href="monitors.html">Monitors</a></li>
+          <li><a href="components.html">Components</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="support.html#contact">Contact Us</a></li>
+          <li><a href="support.html#faqs">FAQs</a></li>
+          <li><a href="support.html#warranty">Warranty & Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="social-links">
+            <a href="https://www.facebook.com" class="social-icon" target="_blank">
+                <img src="public/images/facebook.png" alt="Facebook" style="width: 34px; height: 34px;" />
+            </a>
+                 <a href="https://twitter.com" class="social-icon" target="_blank">
+                 <img src="public/images/x.png" alt="Twitter/X" style="width: 34px; height: 34px;" />
+            </a>
+                <a href="https://www.instagram.com" class="social-icon" target="_blank">
+                <img src="public/images/instagram.png" alt="Instagram" style="width: 34px; height: 34px;" />
+            </a>
+                 <a href="https://www.youtube.com" class="social-icon" target="_blank">
+                 <img src="public/images/youtube.png" alt="YouTube" style="width: 34px; height: 34px;" />
+            </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PLAYTECH. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+  <script>
+    const cartNote = document.getElementById("cart-added-note");
+    const cartButton = document.getElementById("cart-btn");
+
+    function getCart() {
+      return JSON.parse(localStorage.getItem("cart")) || [];
+    }
+
+    function updateCartCount() {
+      document.getElementById("cart-count").textContent = getCart().length;
+    }
+
+    function handleAddToCart(event) {
+      const card = event.target.closest(".product-card");
+      const name = card.querySelector("h3").textContent;
+      const description = card.querySelectorAll("p")[0].textContent;
+      const price = card.querySelector(".price").textContent;
+      const imageStyle = card.querySelector(".product-image").style.backgroundImage;
+      const imageUrl = imageStyle.slice(5, -2);
+
+      const cart = getCart();
+      cart.push({ name, description, price, image: imageUrl });
+      updateCartCount();
+
+      cartNote.style.display = "block";
+      cartButton.classList.add("cart-animate");
+
+      setTimeout(() => {
+        cartNote.style.display = "none";
+        cartButton.classList.remove("cart-animate");
+      }, 1300);
+    }
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+      button.addEventListener("click", handleAddToCart);
+    });
+
+    updateCartCount();
+  </script>
+
+    <script>
+      const searchInput = document.querySelector('.search-bar input');
+      if (searchInput) {
+        searchInput.addEventListener('keypress', function (e) {
+          const trimmed = searchInput.value.trim();
+          if (e.key === 'Enter' && trimmed) {
+            window.location.href = `search.html?query=${encodeURIComponent(trimmed)}`;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

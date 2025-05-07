@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLAYTECH - Cart</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <header id="top-banner">
+    <a href="index.html" class="logo">PLAYTECH</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products..." />
+    </div>
+    <div class="cart-container">
+      <button class="cart-button" onclick="window.location.href='cart.html'">
+        🛒 <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <main class="container" style="margin-top: 100px;">
+      <h2>Your Cart</h2>
+      <div id="cart-items" class="product-grid" style="margin-top: 2rem;"></div>
+      <p id="cart-empty" style="text-align:center; color: var(--gray-color); display:none;">Your cart is empty.</p>
+
+      <div class="cart-bottom-actions">
+        <button class="cta-button" onclick="window.location.href='index.html'">Return to Shop</button>
+        <button class="cta-button" onclick="window.location.href='checkout.html'" style="margin-left: 1rem;">Continue to Checkout</button>
+      </div>
+    </main>
+  </div>
+
+  
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="keyboards.html">Keyboards</a></li>
+          <li><a href="mice.html">Mice</a></li>
+          <li><a href="monitors.html">Monitors</a></li>
+          <li><a href="components.html">Components</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="support.html#contact">Contact Us</a></li>
+          <li><a href="support.html#faqs">FAQs</a></li>
+          <li><a href="support.html#warranty">Warranty & Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#top-banner">Home</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com" class="social-icon" target="_blank">
+            <img src="public/images/facebook.png" alt="Facebook" style="width: 28px; height: 28px;" />
+          </a>
+          <a href="https://twitter.com" class="social-icon" target="_blank">
+            <img src="public/images/x.png" alt="Twitter/X" style="width: 28px; height: 28px;" />
+          </a>
+          <a href="https://www.instagram.com" class="social-icon" target="_blank">
+            <img src="public/images/instagram.png" alt="Instagram" style="width: 28px; height: 28px;" />
+          </a>
+          <a href="https://www.youtube.com" class="social-icon" target="_blank">
+            <img src="public/images/youtube.png" alt="YouTube" style="width: 28px; height: 28px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PLAYTECH. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartEmptyMessage = document.getElementById("cart-empty");
+    const cartCountDisplay = document.getElementById("cart-count");
+
+    function getCart() {
+      return JSON.parse(localStorage.getItem("cart")) || [];
+    }
+
+    function renderCart() {
+      const cart = getCart();
+      cartCountDisplay.textContent = cart.length;
+
+      if (cart.length === 0) {
+        cartEmptyMessage.style.display = "block";
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.style.position = "relative";
+        card.style.overflow = "visible";
+
+        card.innerHTML = `
+          <div class="remove-btn" data-index="${index}">&times;</div>
+          <div class="product-image" style="
+            background-image: url('${item.image}');
+            background-size: 70%;
+            background-position: center;
+            background-repeat: no-repeat;">
+          </div>
+          <h3>${item.name}</h3>
+          <p class="price">${item.price}</p>
+        `;
+        cartItemsContainer.appendChild(card);
+      });
+    }
+
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('remove-btn')) {
+        const index = parseInt(e.target.getAttribute('data-index'));
+        const cart = getCart();
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        location.reload();
+      }
+    });
+
+    renderCart();
+  </script>
+
+  <script>
+  const searchInput = document.querySelector('.search-bar input');
+  if (searchInput) {
+    searchInput.addEventListener('keypress', function (e) {
+        const trimmed = searchInput.value.trim();
+        if (e.key === 'Enter' && trimmed) {
+            window.location.href = `search.html?query=${encodeURIComponent(trimmed)}`;
+        }
+    });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mice - PLAYTECH</title>
+  <link rel="stylesheet" href="src/styles.css" />
+  <style>
+    .filters {{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      color: white;
+    }}
+    .price-range {{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }}
+    .price-range input[type="range"] {{
+      width: 200px;
+    }}
+    #price-range-display {{
+      color: var(--primary-color);
+    }}
+  </style>
+</head>
+<body>
+  <header id="top-banner">
+    <a href="index.html" class="logo">PLAYTECH</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products..." />
+    </div>
+    <div class="cart-container">
+      <button class="cart-button" onclick="window.location.href='cart.html'">
+        🛒 <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="category-page" style="padding: 2rem; margin-top: 100px;">
+    <h1 style="color: white;">Mice</h1>
+
+    <div class="filters">
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option value="default">Default</option>
+        <option value="asc">Price: Low to High</option>
+        <option value="desc">Price: High to Low</option>
+      </select>
+
+      <div class="price-range">
+        <label>Price range:</label>
+        <input type="range" id="min-price" min="0" max="300" step="10" value="0" />
+        <input type="range" id="max-price" min="0" max="300" step="10" value="300" />
+        <span id="price-range-display">$0 - 300</span>
+      </div>
+    </div>
+
+    <div id="product-list" class="product-grid">
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="keyboards.html">Keyboards</a></li>
+          <li><a href="mice.html">Mice</a></li>
+          <li><a href="monitors.html">Monitors</a></li>
+          <li><a href="components.html">Components</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="support.html#contact">Contact Us</a></li>
+          <li><a href="support.html#faqs">FAQs</a></li>
+          <li><a href="support.html#warranty">Warranty & Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com" class="social-icon" target="_blank">
+            <img src="public/images/facebook.png" alt="Facebook" style="width: 34px; height: 34px;" />
+          </a>
+          <a href="https://twitter.com" class="social-icon" target="_blank">
+            <img src="public/images/x.png" alt="Twitter/X" style="width: 34px; height: 34px;" />
+          </a>
+          <a href="https://www.instagram.com" class="social-icon" target="_blank">
+            <img src="public/images/instagram.png" alt="Instagram" style="width: 34px; height: 34px;" />
+          </a>
+          <a href="https://www.youtube.com" class="social-icon" target="_blank">
+            <img src="public/images/youtube.png" alt="YouTube" style="width: 34px; height: 34px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PLAYTECH. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="cart-notification" style="
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  ">
+    Added to cart!
+  </div>
+
+  <script>
+  const searchInput = document.querySelector('.search-bar input');
+  if (searchInput) {
+    searchInput.addEventListener('keypress', function (e) {
+        const trimmed = searchInput.value.trim();
+        if (e.key === 'Enter' && trimmed) {
+            window.location.href = `search.html?query=${encodeURIComponent(trimmed)}`;
+        }
+    });
+    }
+  </script>
+
+  <script type="module" src="src/category.js"></script>
+</body>
+</html>
