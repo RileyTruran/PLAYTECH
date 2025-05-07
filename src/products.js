@@ -4,7 +4,7 @@ const products = [
     price: 149.99,
     image: "public/images/rgb_pro.png",
     category: "Keyboards",
-    description: "CHERRY MX RGB Brown Switches: Tactile and Non-Clicky, 8,000Hz Hyper-Polling, PBT DOUBLE-SHOT"
+    description: "CHERRY MX RGB Brown Switches: Tactile and Non-Clicky Keyboard, 8,000Hz Hyper-Polling, PBT DOUBLE-SHOT"
   },
   {
     name: "GIGABYTE GeForce RTX 4060 GPU",
