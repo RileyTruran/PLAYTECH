@@ -84,7 +84,7 @@ new GLTFLoader().load(
     const box = new THREE.Box3().setFromObject(container);
     const center = box.getCenter(new THREE.Vector3());
     container.position.sub(center);
-    container.position.y += 17.5;
+    container.position.y += 18.5;
     container.position.x -= 25;
     container.rotation.x = THREE.MathUtils.degToRad(-5);
     container.rotation.z = THREE.MathUtils.degToRad(90);
