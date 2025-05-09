@@ -50,7 +50,7 @@ const products = [
   },
   {
     name: "Steel Series Rival 650",
-    price: 279.99,
+    price: 149.99,
     image: "public/images/mouse3.png",
     category: "Mice",
     description: "Exclusive Quantum WirelessTM offers lag-free 1000Hz (1ms) gaming 15-minutes of Fast Charging Delivers 10+ Hours of Game Play"
