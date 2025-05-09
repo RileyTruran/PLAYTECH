@@ -17,8 +17,10 @@ function renderProducts(filtered) {
       <div class="product-image" style="background-image: url('${p.image}'); background-size: 70%; background-position: center; background-repeat: no-repeat;"></div>
       <h3>${p.name}</h3>
       <p>${p.description}</p>
-      <p class="price">$${p.price.toFixed(2)}</p>
-      <button class="add-to-cart">Add to Cart</button>
+      <div class="bottom-content">
+        <p class="price">$${p.price.toFixed(2)}</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
     `;
     list.appendChild(card);
   });
