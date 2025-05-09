@@ -84,6 +84,20 @@ const products = [
     description: "High refresh rate gaming monitor"
   },
   {
+    name: "Asus ROG XG32WCS-J",
+    price: 649.99,
+    image: "public/images/monitor3.png",
+    category: "Monitors",
+    description: "32 inch QHD 180Hz Curved Gaming Monitor"
+  },
+  {
+    name: "Alienware AW2725DF",
+    price: 1119.99,
+    image: "public/images/monitor4.png",
+    category: "Monitors",
+    description: "60Hz QD-OLED Gaming Monitor - VESA DisplayHDR True Black 400"
+  },
+  {
     name: "Cooler Master Cosmos C700M",
     price: 499.99,
     image: "public/images/components4.png",
