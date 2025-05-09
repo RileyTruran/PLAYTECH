@@ -25,8 +25,10 @@ function createProductCard(product) {
       background-repeat: no-repeat;"></div>
     <h3>${product.name}</h3>
     <p>${product.description}</p>
-    <p class="price">$${product.price.toFixed(2)}</p>
-    <button class="add-to-cart">Add to Cart</button>
+    <div class="bottom-content">
+      <p class="price">$${product.price.toFixed(2)}</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
   `;
   card.querySelector('.add-to-cart').addEventListener('click', () => {
     const cart = getCart();
