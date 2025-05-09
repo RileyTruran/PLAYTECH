@@ -9,7 +9,7 @@ const products = [
   {
     name: "ASUS ROG Harpe Ace",
     price: 299.99,
-    image: "public/images/rgb_pro.png",
+    image: "public/images/mouse4.png",
     category: "Mice",
     description: "Carbon Fiber Build, 47g Lightweight, AimPoint Pro 42K Optical Sensor"
   },
