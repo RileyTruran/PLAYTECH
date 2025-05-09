@@ -7,6 +7,13 @@ const products = [
     description: "CHERRY MX RGB Brown Switches: Tactile and Non-Clicky Keyboard, 8,000Hz Hyper-Polling, PBT DOUBLE-SHOT"
   },
   {
+    name: "ASUS ROG Harpe Ace",
+    price: 299.99,
+    image: "public/images/rgb_pro.png",
+    category: "Mice",
+    description: "Carbon Fiber Build, 47g Lightweight, AimPoint Pro 42K Optical Sensor"
+  },
+  {
     name: "Wooting 60HE",
     price: 299.99,
     image: "public/images/keyboard4.png",
