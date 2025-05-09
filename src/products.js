@@ -11,14 +11,14 @@ const products = [
     price: 299.99,
     image: "public/images/mouse4.png",
     category: "Mice",
-    description: "Carbon Fiber Build, 47g Lightweight, AimPoint Pro 42K Optical Sensor"
+    description: "Carbon Fiber Build, 47g Lightweight Mouse, AimPoint Pro 42K Optical Sensor"
   },
   {
     name: "Wooting 60HE",
     price: 299.99,
     image: "public/images/keyboard4.png",
     category: "Keyboards",
-    description: "<1ms latency, Adjustable Actuation Point Rapid Trigger Instantly Deactivate Keys for the Fastest Response and Key Repeat."
+    description: "<1ms Keyboard Latency, Adjustable Actuation Point Rapid Trigger Instantly Deactivate Keys for the Fastest Response and Key Repeat."
   },
   {
     name: "GIGABYTE GeForce RTX 4060 GPU",
@@ -53,7 +53,7 @@ const products = [
     price: 149.99,
     image: "public/images/mouse3.png",
     category: "Mice",
-    description: "Exclusive Quantum WirelessTM offers lag-free 1000Hz (1ms) gaming 15-minutes of Fast Charging Delivers 10+ Hours of Game Play"
+    description: "Exclusive WirelessTM offers lag-free 1000Hz (1ms) gaming. 15-minutes of Fast Charging the Mouse Delivers 10+ Hours of Game Play"
   },
   {
     name: "Ducky One 2 Mini",
@@ -81,7 +81,7 @@ const products = [
     price: 1799.99,
     image: "public/images/monitor.png",
     category: "Monitors",
-    description: "High refresh rate gaming monitor"
+    description: "240Hz QD-OLED Gaming Monitor, 3840x2160, 16:9, 1x USB-C"
   },
   {
     name: "Asus ROG XG32WCS-J",
