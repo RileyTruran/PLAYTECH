@@ -42,6 +42,13 @@ const products = [
     description: "Ultra-Lightweight Wireless Symmetrical Esports Gaming Mouse"
   },
   {
+    name: "Steel Series Rival 650",
+    price: 279.99,
+    image: "public/images/mouse3.png",
+    category: "Mice",
+    description: "Exclusive Quantum WirelessTM offers lag-free 1000Hz (1ms) gaming 15-minutes of Fast Charging Delivers 10+ Hours of Game Play"
+  },
+  {
     name: "Ducky One 2 Mini",
     price: 129.99,
     image: "public/images/silent_touch.png",
