@@ -77,6 +77,13 @@ const products = [
     description: "High refresh rate gaming monitor"
   },
   {
+    name: "Cooler Master Cosmos C700M",
+    price: 499.99,
+    image: "public/images/components4.png",
+    category: "Components",
+    description: "Curved Tempered Glass RGB ARGB Lighting ATX E-ATX Full Tower Case"
+  },
+  {
     name: "Intel i9 14900K",
     price: 799.99,
     image: "public/images/components.png",
