@@ -15,6 +15,11 @@
   animation-fill-mode: both;
 }
 
+.cart-button:hover {
+  transform: scale(1.25);
+  transition: transform 0.2s ease-in-out;
+}
+
 :root {
   --primary-color: #5d4fff;
   --secondary-color: #ff416c;
