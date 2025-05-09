@@ -242,6 +242,11 @@ section {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
 }
 
 .product-card:hover {
@@ -284,6 +289,7 @@ section {
   font-weight: 600;
   font-size: 1.25rem;
   padding: 0.5rem 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .add-to-cart {
@@ -765,6 +771,7 @@ a[href^="mailto:"]:hover {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.2s ease;
+  margin-top: 0.75rem;
 }
 
 .category-page .product-card .add-to-cart:hover {
@@ -792,6 +799,11 @@ a[href^="mailto:"]:hover {
   -moz-appearance: none;
   cursor: pointer;
   transition: border 0.2s ease;
+}
+
+.product-card .bottom-content {
+  margin-top: auto;
+  padding-top: 1.25rem;
 }
 
 .category-page select#sort:hover,
