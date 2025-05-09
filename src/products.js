@@ -50,7 +50,7 @@ const products = [
   },
   {
     name: "Razer Huntsman Mini",
-    price: 159.99,
+    price: 249.99,
     image: "public/images/wireless_elite.png",
     category: "Keyboards",
     description: "Fast Keyboard Switches - Linear Optical Switches - Chroma RGB Lighting - PBT Keycaps - Onboard Memory - Snap Tap"
