@@ -7,6 +7,13 @@ const products = [
     description: "CHERRY MX RGB Brown Switches: Tactile and Non-Clicky Keyboard, 8,000Hz Hyper-Polling, PBT DOUBLE-SHOT"
   },
   {
+    name: "Wooting 60HE",
+    price: 299.99,
+    image: "public/images/keyboard4.png",
+    category: "Keyboards",
+    description: "<1ms latency, Adjustable Actuation Point Rapid Trigger Instantly Deactivate Keys for the Fastest Response and Key Repeat."
+  },
+  {
     name: "GIGABYTE GeForce RTX 4060 GPU",
     price: 599.99,
     image: "public/images/4060.png",
